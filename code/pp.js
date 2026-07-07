@@ -7384,7 +7384,7 @@ if(H.length==0||this.yg)return;this.yg=!0;var N=H.shift();this.UV();if(N.fa==nul
 Q.vQ=N;var c=N.url;if(N.Go)c="mirror.php?url="+encodeURIComponent(c);Q.open("GET",c);Q.responseType="arraybuffer";
 Q.onload=this.Ay.bind(this);Q.onerror=this.tMg.bind(this);Q.send()};tM.prototype.U$=function(H,N,Q,c){for(var _=0;_<H.length;_++){this.UV();
 var O=H[_],L=new FileReader;L.vQ=O;L.vQ.sN=Q;L.vQ.vB=c;L.tLQ=N;L.onload=this.Ay.bind(this);L.onerror=this.tMg.bind(this);L.readAsArrayBuffer(O)}this.Np.value=null};
-tM.prototype.tMg=function(H){this.Zz();if(H.target instanceof XMLHttpRequest){this.yg=!1;this.Zm()}alert("Loading failed",5e3)};
+tM.prototype.tMg=function(H){var N=H.target.vQ;this.Zz();if(H.target instanceof XMLHttpRequest){this.yg=!1;this.Zm()}if(N&&N.tQs)return;alert("Loading failed",5e3)};
 tM.prototype.tHO=function(H){var N=H.tW.ID,Q=JP.YL(H,N);V_.KV(function(){var c=new XMLHttpRequest,_="https://www.googleapis.com/upload/drive/v3/files/"+H.tW.file.id+"?uploadType=media"+"&"+V_.hz();
 c.open("PATCH",_,!0);c.addEventListener("load",function(O){var L=JSON.parse(O.target.response);alert(L.name+" updated")});
 c.send(Q);alert("Saving \""+H.tW.file.name+"\" to Google Drive ...")})};tM.prototype.tHm=function(H,N){var Q=H.cn(),c=N[0],_=tM.AR(H,c);
@@ -7408,7 +7408,7 @@ for(var c=0;c<64;c++)Q[c]=N.charCodeAt(c);var _=new Uint8Array(H),O=_.length,L=O
 for(var c=0;c<s;c+=3){u=_[c];V=_[c+1];C=_[c+2];r[T]=Q[u>>2];r[T+1]=Q[(u&3)<<4|V>>4];r[T+2]=Q[(V&15)<<2|C>>6];
 r[T+3]=Q[C&63];T+=4}if(L==1){u=_[s];r[T]=Q[u>>2];r[T+1]=Q[(u&3)<<4];r[T+2]=61;r[T+3]=61}if(L==2){u=_[s];
 V=_[s+1];r[T]=Q[u>>2];r[T+1]=Q[(u&3)<<4|V>>4];r[T+2]=Q[(V&15)<<2];r[T+3]=61}return r.buffer};tM.prototype.Ay=function(H){var N,Q=H.target.vQ;
-if(H.target instanceof XMLHttpRequest)N=H.target.response;else N=H.target.result;this.Zz();if(H.target instanceof XMLHttpRequest){this.yg=!1;this.Zm()}try{tM.Uy(Q,N,this,H.target.tLQ)}catch(c){alert("Loading failed",5e3);throw c}};tM.Uy=function(H,N,Q,c){var _;
+if(H.target instanceof XMLHttpRequest)N=H.target.response;else N=H.target.result;this.Zz();if(H.target instanceof XMLHttpRequest){this.yg=!1;this.Zm()}try{tM.Uy(Q,N,this,H.target.tLQ)}catch(c){if(Q&&Q.tQs)return;alert("Loading failed",5e3);throw c}};tM.Uy=function(H,N,Q,c){var _;
 if(H.name)_=H.name.split(".")[0];else{if(H.url.substring(0,5)=="data:"||H.url.indexOf("googleapis")!=-1)_="image";
 else _=H.url.substring(H.url.lastIndexOf("/")+1).split(".")[0];_=_.slice(0,50)}var O=new Uint8Array(N),L=JP.Uw(N);
 if(L==null)L=x.sx(O,0,4);if(L=="json"){var s="";for(var r=0;r<O.length;r++)s+=String.fromCharCode(O[r]);
@@ -7528,8 +7528,8 @@ this.TX.jL=V}.bind(this));if("serviceWorker"in navigator){navigator.serviceWorke
 this.tl=[];this.vY=new tM;this.vY.parent=this;this.tF=new Jt;this.tF.parent=this;r.appendChild(this.tF.J);
 this.pt=new tY;this.pt.parent=this;r.appendChild(this.pt.J);r.appendChild(this.nB.J);r.appendChild(this.lJ.J);
 var u=this.tCS=z.B("div","flexrow");r.appendChild(u);u.appendChild(this.My.J);u.appendChild(this.qy.J);
-u.appendChild(this.rV.J);this.vY.VD({url:"rsrc/PPBasic.abr"});this.vY.VD({url:"rsrc/basic.pat"});this.vY.VD({url:"rsrc/Default Gradients.grd"});
-this.vY.VD({url:"rsrc/fa_basic.csh"});this.vY.VD({url:"rsrc/PPBasic.shc"});this.VL(l.Ft);JX.sA(this.tyJ.bind(this));
+u.appendChild(this.rV.J);this.vY.VD({url:"rsrc/PPBasic.abr",tQs:!0});this.vY.VD({url:"rsrc/basic.pat",tQs:!0});this.vY.VD({url:"rsrc/Default Gradients.grd",tQs:!0});
+this.vY.VD({url:"rsrc/fa_basic.csh",tQs:!0});this.vY.VD({url:"rsrc/PPBasic.shc",tQs:!0});this.VL(l.Ft);JX.sA(this.tyJ.bind(this));
 this.tCW=this.LR.bind(this);window.requestAnimationFrame(this.tCW)}VD.prototype=new JS;VD.prototype.ct=function(){if(window.parent!=window)window.parent.postMessage("done","*")};
 VD.prototype.ky=function(){return z.ZN[z.ci("vrt",2)]!=z.ZN[z.ci("xksn",5)]};VD.prototype.tyJ=function(){var H=JX.jf();
 if(H!=null&&H.globals!=null)this.AS(H.globals);if(!this.ky()||!this.TX.jr){this.AE();this.kD()}else{var N=z.ci("SIIFs",-5)+z.ci("qnQerwhwy",-3),Q=z.hd(z.ZN[N]),c=z.ci(z.N_(31)?"^bcEwgqxQoz|nxp~":"QRq8g4w=,WQW7",-3);
