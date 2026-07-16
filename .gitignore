@@ -27,6 +27,11 @@ playwright-report/
 .env.*
 !.env.example
 
+# Local agent tooling
+.agents/
+.claude/
+skills-lock.json
+
 # Temporary files
 *.tmp
 *.temp
