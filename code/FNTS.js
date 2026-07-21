@@ -34329,4 +34329,28 @@
 			"custom/noto-serif-sc/1"
 		]
 	]
-}
+};
+FNTS.list = FNTS.list.filter(function(font) {
+	return {
+		"custom/noto-sans-sc/0": true,
+		"custom/noto-sans-sc/1": true,
+		"custom/noto-serif-sc/0": true,
+		"custom/noto-serif-sc/1": true,
+		"fs/roboto-2014/4": true,
+		"fs/roboto-2014/5": true,
+		"fs/roboto-2014/8": true,
+		"fs/roboto-2014/9": true,
+		"fs/liberation-sans/0": true,
+		"fs/liberation-sans/1": true,
+		"fs/liberation-sans/2": true,
+		"fs/liberation-sans/3": true,
+		"fs/liberation-serif/0": true,
+		"fs/liberation-serif/1": true,
+		"fs/liberation-serif/2": true,
+		"fs/liberation-serif/3": true,
+		"fs/liberation-mono/0": true,
+		"fs/liberation-mono/1": true,
+		"fs/liberation-mono/2": true,
+		"fs/liberation-mono/3": true
+	}[font[5]] === true;
+});
