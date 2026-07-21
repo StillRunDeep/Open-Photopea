@@ -34295,6 +34295,38 @@
 			3,
 			14,
 			"fs/spinwerad/1"
+		],
+		[
+			"Noto Sans CJK SC",
+			"Regular",
+			"NotoSansCJKsc-Regular",
+			257,
+			12,
+			"custom/noto-sans-sc/0"
+		],
+		[
+			"Noto Sans CJK SC",
+			"Bold",
+			"NotoSansCJKsc-Bold",
+			257,
+			12,
+			"custom/noto-sans-sc/1"
+		],
+		[
+			"Noto Serif CJK SC",
+			"Regular",
+			"NotoSerifCJKsc-Regular",
+			257,
+			14,
+			"custom/noto-serif-sc/0"
+		],
+		[
+			"Noto Serif CJK SC",
+			"Bold",
+			"NotoSerifCJKsc-Bold",
+			257,
+			14,
+			"custom/noto-serif-sc/1"
 		]
 	]
 }

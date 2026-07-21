@@ -45,6 +45,19 @@ php -S localhost:8080
 - 保存为 PSD 格式（文件 - 另存为 PSD）或导出为 JPG / PNG / SVG（文件 - 导出）
 - 高级图像编辑功能：图层、选区、滤镜、调整等
 
+### 字体资源
+
+项目已内置一组常用开源字体，方便文字工具直接显示中英文内容：
+
+- 中文黑体：Noto Sans CJK SC Regular / Bold
+- 中文宋体：Noto Serif CJK SC Regular / Bold
+- 英文无衬线：Roboto Regular / Bold / Italic / BoldItalic
+- 常见英文替代：Liberation Sans / Serif / Mono
+
+字体文件位于 `rsrc/fonts/custom/` 和 `rsrc/fonts/fs/`。中文字体和常见中文系统字体名（如微软雅黑、宋体、苹方、黑体）会映射到 Noto CJK 字体；常见英文字体名会映射到 Roboto 或 Liberation 系列。
+
+如果打开 PSD 时仍提示缺失字体，表示该字体不在当前内置集合中，程序会使用相近字体替代。新增字体时需要同时放入字体文件、更新 `code/FNTS.js`，必要时更新 `code/pp.js` 中的字体替代映射。字体来源和授权记录见 `rsrc/fonts/custom/README.md`。
+
 ### 项目结构
 
 ```
