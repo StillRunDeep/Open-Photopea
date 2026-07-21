@@ -45,18 +45,6 @@
 				localStorage.setItem("capShown", ""+vis);
 			}
 		</script>
-		<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-		<script>
-		  var googletag = googletag || {};
-		  googletag.cmd = googletag.cmd || [];
-		</script>
-		<script>
-		  googletag.cmd.push(function() {
-			googletag.defineSlot('/21623892374/pp_tall', [120, 600], 'div-gpt-ad-1525797053614-0').addService(googletag.pubads());
-			googletag.pubads().enableSingleRequest();
-			googletag.enableServices();
-		  });
-		</script>
 	</head>
 	
 	<body class="theme0">		
@@ -87,18 +75,18 @@
 		
 		<div class="topfloat" style="display:none;">
 			<a class="bbtn" onclick="showCap()" style="background:#ff6600;cursor:pointer;">Info</a>
-			<!--<a onclick="ga('send','event','Links','story');"  href="//blog.photopea.com/creating-photopea.html" style="background:#6827ff;" target="_blank">Story</a>-->
-			<a class="bbtn" onclick="ga('send','event','Links','issues');" href="https://github.com/photopea/photopea/issues" style="background:#559900;" target="_blank">Report a bug</a>
-			<a class="bbtn" onclick="ga('send','event','Links','learn');"  href="learn/index.html" style="background:#aa0099;" target="_blank">Learn</a>
-			<a class="bbtn" onclick="ga('send','event','Links','blog');" href="https://blog.photopea.com"     style="background:#e30044;" target="_blank">Blog</a>
-			<a class="bbtn" onclick="ga('send','event','Links','api');" href="api/index.html"   style="background:#f1c40f;" target="_blank">API</a>
+			<!--<a  href="//blog.photopea.com/creating-photopea.html" style="background:#6827ff;" target="_blank">Story</a>-->
+			<a class="bbtn" href="https://github.com/photopea/photopea/issues" style="background:#559900;" target="_blank">Report a bug</a>
+			<a class="bbtn"  href="learn/index.html" style="background:#aa0099;" target="_blank">Learn</a>
+			<a class="bbtn" href="https://blog.photopea.com"     style="background:#e30044;" target="_blank">Blog</a>
+			<a class="bbtn" href="api/index.html"   style="background:#f1c40f;" target="_blank">API</a>
 			<!--
 			<a href="https://chrome.google.com/webstore/detail/photopea/fmophgdjdipcbfjiopifpngdjmemonko" style="background:#9900aa;" target="_blank">Chrome App</a>
-			<a onclick="ga('send','event','Links','reddit');" href="//www.reddit.com/r/photopea" style="background:#ff4500" target="_blank">Reddit</a>
+			<a href="//www.reddit.com/r/photopea" style="background:#ff4500" target="_blank">Reddit</a>
 			-->
-			<a class="bbtn" onclick="ga('send','event','Links','twitter');" href="https://twitter.com/photopeacom" style="background:#1b95e0" target="_blank">Twi</a>
-			<a class="bbtn" onclick="ga('send','event','Links','facebook');" href="https://www.facebook.com/photopea/" style="background:#46629e" target="_blank">Facebook</a>
-			<!--<a onclick="ga('send','event','Links','bigDropInc');" href="https://www.bigdropinc.com" style="background:#f1c40f" target="_blank"  
+			<a class="bbtn" href="https://twitter.com/photopeacom" style="background:#1b95e0" target="_blank">Twi</a>
+			<a class="bbtn" href="https://www.facebook.com/photopea/" style="background:#46629e" target="_blank">Facebook</a>
+			<!--<a href="https://www.bigdropinc.com" style="background:#f1c40f" target="_blank"  
 					title="Big Drop Inc. - get your design done by professionals" >Big Drop Inc</a>-->
 		</div>
 		
@@ -108,23 +96,13 @@
 			if(pname=="p") {  var pval = JSON.parse(decodeURI(url.substring(eind+1, url.length)));
 				if(pval.environment && !pval.environment.showbranding) {  document.getElementsByClassName("topfloat")[0].style.display="none";  hideCap();  } }*/
 		</script>
-		
-		<script async src="https://apis.google.com/js/client.js"></script>
-		
+				
 		<script src="code/external/ext.js"></script>	
 		<script src="code/PIMG.js"></script>		
 		<script src="code/FNTS.js"></script>
 		<script src="code/LNG2.js"></script>
 		<script src="code/pp.js"></script>	
 		
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-4249565-37', 'photopea.com');
-		  ga('send', 'pageview');
-		</script>
 	</body>
 
 </html>

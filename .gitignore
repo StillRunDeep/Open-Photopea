@@ -36,3 +36,4 @@ skills-lock.json
 *.tmp
 *.temp
 .cache/
+.gstack/
